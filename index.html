@@ -303,44 +303,24 @@
       &copy; 2026 <em>ELARA</em> Fashion. All rights reserved.
     </div>
   </footer>
-
-  <script>
-    // ─── LOADER ───
-    window.addEventListener('load', () => {
-      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
-    });
-
-    // ─── NAV SCROLL ───
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // ─── HAMBURGER ───
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    // ─── SCROLL REVEAL ───
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealEls.forEach(el => observer.observe(el));
-  </script>
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img-placeholder">
+          <span>ELARA</span>
+        </div>
+        <div class="modal-info">
+          <span class="modal-category">Kategori</span>
+          <h2 class="modal-title">Nama Produk</h2>
+          <span class="modal-price">Rp 0</span>
+          <p class="modal-desc">Detail produk ini sangat hype dan cocok untuk gaya daily streetwear. Dibuat dengan material premium, dengan cuttingan yang bervariasi tanpa membatasi kebebasan bergerak. Sikat miring sebelum kehabisan!</p>
+          <a href="#" target="_blank" class="btn btn-primary"><span>COP NOW!! Beli Sekarang</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
