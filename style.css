@@ -196,9 +196,20 @@ section { padding: 6rem 5%; border-bottom: 4px solid var(--dark); }
 #collection { background: #e0e0e0; }
 .collection-header { text-align: center; margin-bottom: 4rem; }
 .collection-header .section-desc { margin: 0 auto; }
+.collection-action {
+  max-width: 1200px; /* Ukuran ini menyamakan lebar dengan grid produk */
+  margin: 0 auto 2rem auto; /* Memberi jarak 2rem ke bawah (jarak ke produk) */
+  display: flex;
+  justify-content: flex-end; /* Kunci sihir untuk memojokkan tombol ke kanan */
+  padding: 0;
+}
 .collection-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem; max-width: 1200px; margin: 0 auto;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: 0 auto;
+  justify-content:center; 
 }
 .product-card {
   position: relative; cursor: pointer; aspect-ratio: 3/4; background: #ffffff;
